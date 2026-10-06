@@ -1,0 +1,18 @@
+{
+  "name": "dropsphere-signaling-server",
+  "version": "1.0.0",
+  "description": "DropSphere WebRTC WebSocket Signaling Hub",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.14"
+  }
+}

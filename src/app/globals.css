@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --surface-glass: rgba(255, 255, 255, 0.85);
+  --border: #e2e8f0;
+  --border-subtle: #f1f5f9;
+  --border-active: #3b82f6;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-glass: var(--surface-glass);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-active: var(--border-active);
+  --color-primary: var(--primary);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Interactive Finger Pointer */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+a,
+select,
+summary,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+label,
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed !important;
+}
+
+/* ── Apple Fresh Clean Card Panels ── */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+.glass-panel-elevated {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 20px 40px -4px rgba(15, 23, 42, 0.08), 0 8px 16px -2px rgba(15, 23, 42, 0.03);
+}
+
+.glass-pill {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+/* Custom Scrollbar for studio queue */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
