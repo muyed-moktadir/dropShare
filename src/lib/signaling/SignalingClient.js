@@ -12,6 +12,9 @@ export class SignalingClient {
         if (serverUrl) {
             this.url = serverUrl;
         }
+        else if (process.env.NEXT_PUBLIC_SIGNALING_URL) {
+            this.url = process.env.NEXT_PUBLIC_SIGNALING_URL;
+        }
         else if (typeof window !== 'undefined') {
             const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
             // If opened via QR scan, the hostname in URL is already the LAN IP of the server
